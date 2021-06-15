@@ -24,8 +24,7 @@ const router = require('express').Router()
     "message": "You shall not pass!"
   }
  */
-  router.get('/api/users', restricted, (req, res, next) => {
-    console.log('USERS ROUTER')
+  router.get('/', restricted, (req, res, next) => {
     Models.find()
       .then(users => {
         res.status(200).json(users)
